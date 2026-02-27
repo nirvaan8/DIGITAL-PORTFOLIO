@@ -7,64 +7,152 @@
 </head>
 <body>
 
-    <header>
-        <h1>Nirvaan Katyal</h1>
-        <p>Cybersecurity Undergraduate | SOC Enthusiast</p>
-        <div class="buttons">
-            <a href="https://github.com/nirvaan8" target="_blank">GitHub</a>
-            <a href="http://www.linkedin.com/in/nirvaan-katyal-a8571928a" target="_blank">LinkedIn</a>
+<header>
+    <h1>Nirvaan Katyal</h1>
+    <p class="tagline">Cybersecurity Undergraduate | SOC • SIEM • Threat Detection</p>
+
+    <div class="hero-buttons">
+        <a href="assets/Nirvaan_Katyal_Resume.pdf" target="_blank" download class="btn-primary">Download Resume</a>
+        <a href="https://github.com/nirvaan8" target="_blank" class="btn-secondary">GitHub</a>
+        <a href="http://www.linkedin.com/in/nirvaan-katyal-a8571928a" target="_blank" class="btn-secondary">LinkedIn</a>
+    </div>
+</header>
+
+<section class="section">
+    <h2>Professional Summary</h2>
+    <p>
+        Cybersecurity undergraduate specializing in Security Operations Center (SOC) practices,
+        real-time threat detection, log analysis, and network defense.
+        Experienced in building multi-VM SOC lab environments using Wazuh SIEM,
+        Splunk, Kali Linux, and Ubuntu Server.
+    </p>
+    <p>
+        Skilled in analyzing system logs, correlating events, detecting brute-force attempts,
+        port scanning activity, and implementing automated active response mechanisms.
+        Seeking a 1-year SOC internship to contribute to incident detection and monitoring operations.
+    </p>
+</section>
+
+<section class="section">
+    <h2>Technical Skills</h2>
+
+    <div class="skills-grid">
+        <div>
+            <h3>Cybersecurity & Networking</h3>
+            <ul>
+                <li>TCP/IP, DNS, HTTP/HTTPS Analysis</li>
+                <li>Network Packet Inspection (Wireshark)</li>
+                <li>Log Correlation & SIEM Fundamentals</li>
+                <li>Basic Threat Intelligence Concepts</li>
+            </ul>
         </div>
-    </header>
 
-    <section>
-        <h2>About Me</h2>
-        <p>
-            Cybersecurity undergraduate specializing in Security Operations (SOC), 
-            threat monitoring, and network analysis. Experienced in Linux, Wireshark, 
-            Python, and SIEM tools. Seeking a 1-year cybersecurity internship.
-        </p>
-    </section>
+        <div>
+            <h3>Security Tools</h3>
+            <ul>
+                <li>Wazuh SIEM (Agent + Manager Setup)</li>
+                <li>Splunk (Search Queries & Dashboards)</li>
+                <li>Nmap (Port Scanning & Service Detection)</li>
+                <li>Kali Linux</li>
+                <li>Burp Suite (Basic)</li>
+            </ul>
+        </div>
 
-    <section>
-        <h2>Skills</h2>
+        <div>
+            <h3>Operating Systems</h3>
+            <ul>
+                <li>Ubuntu Server 22.04</li>
+                <li>Linux CLI Administration</li>
+                <li>Windows Event Log Analysis</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Programming</h3>
+            <ul>
+                <li>Python (Security Scripting Basics)</li>
+                <li>Flask Backend Development</li>
+                <li>MySQL (Normalized Schema Design)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Project Case Studies</h2>
+
+    <div class="project-card">
+        <h3>Automated SOC Threat Detection Lab (Wazuh SIEM)</h3>
+
+        <h4>Objective</h4>
+        <p>Simulated real-world SOC monitoring by deploying Wazuh SIEM for log analysis and automated response.</p>
+
+        <h4>Architecture</h4>
+        <p>Kali Linux (Attacker) → Ubuntu/Windows (Agent) → Wazuh Manager → Alert & Active Response</p>
+
+        <h4>Attacks Simulated</h4>
         <ul>
-            <li>TCP/IP, DNS, HTTP/HTTPS</li>
-            <li>Wireshark, Nmap, Kali Linux</li>
-            <li>Splunk (Learning), Burp Suite</li>
-            <li>Linux & Windows</li>
-            <li>Python (Security Scripting)</li>
+            <li>SSH Brute-force Attempts</li>
+            <li>Port Scanning using Nmap</li>
+            <li>Unauthorized Login Attempts</li>
         </ul>
-    </section>
 
-    <section>
-        <h2>Projects</h2>
+        <h4>Detection & Response</h4>
+        <ul>
+            <li>Configured alert rules for repeated failed logins</li>
+            <li>Implemented threshold-based detection</li>
+            <li>Enabled Active Response to block attacker IP automatically</li>
+        </ul>
+    </div>
 
-        <div class="project">
-            <h3>Mini SOC Lab</h3>
-            <p>Built SOC lab using Kali Linux, Windows VM & Splunk. Monitored logs and detected suspicious activity.</p>
-        </div>
+    <div class="project-card">
+        <h3>Mini SOC Lab using Splunk</h3>
 
-        <div class="project">
-            <h3>Network Vulnerability Scanning</h3>
-            <p>Performed Nmap scans in controlled lab. Identified open ports & documented vulnerabilities.</p>
-        </div>
+        <h4>Objective</h4>
+        <p>Built a home SOC lab to monitor system logs and create security dashboards.</p>
 
-        <div class="project">
-            <h3>ShopSphere Secure</h3>
-            <p>Flask + MySQL e-commerce platform with PBKDF2 hashing & brute-force protection.</p>
-        </div>
+        <h4>Implementation</h4>
+        <ul>
+            <li>Integrated Windows logs into Splunk</li>
+            <li>Created dashboards for login attempts and suspicious events</li>
+            <li>Configured alert triggers</li>
+        </ul>
+    </div>
 
-    </section>
+    <div class="project-card">
+        <h3>ShopSphere Secure – Secure E-Commerce Platform</h3>
 
-    <section>
-        <h2>Contact</h2>
-        <p>Email: nirvaan.katyal23@st.niituniversity.in</p>
-        <p>Phone: +91-959972745</p>
-    </section>
+        <h4>Security Features Implemented</h4>
+        <ul>
+            <li>PBKDF2 Password Hashing</li>
+            <li>Brute-force Account Lockout (5 attempts)</li>
+            <li>Role-Based Access Control (RBAC)</li>
+            <li>Admin Account Unlock Feature</li>
+        </ul>
+    </div>
 
-    <footer>
-        <p>© 2026 Nirvaan Katyal</p>
-    </footer>
+</section>
+
+<section class="section">
+    <h2>Certifications</h2>
+    <ul>
+        <li>Cisco – Introduction to Cybersecurity</li>
+        <li>Splunk Fundamentals 1</li>
+        <li>Fortinet NSE 1 & 2</li>
+        <li>TryHackMe – Network & Linux Labs</li>
+    </ul>
+</section>
+
+<section class="section contact">
+    <h2>Contact</h2>
+    <p>Email: nirvaan.katyal23@st.niituniversity.in</p>
+    <p>Phone: +91-959972745</p>
+    <p>Location: New Delhi, India</p>
+</section>
+
+<footer>
+    <p>© 2026 Nirvaan Katyal | Cybersecurity Portfolio</p>
+</footer>
 
 </body>
 </html>
