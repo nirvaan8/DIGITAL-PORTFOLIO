@@ -6,33 +6,39 @@ body {
   line-height: 1.6;
 }
 
+/* HERO SECTION */
+
 .hero {
-  padding: 60px 10%;
+  padding: 80px 10%;
   background: #111827;
 }
 
 .hero-container {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 40px;
+  justify-content: space-between;
+  gap: 70px;
 }
 
 .hero-image img {
-  width: 260px;
+  width: 300px;            /* Slightly bigger than passport size */
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.hero-text {
+  max-width: 650px;
 }
 
 .hero-text h1 {
-  font-size: 2.6rem;
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 
 .hero-text h2 {
   color: #38bdf8;
-  font-size: 1.2rem;
-  margin-bottom: 15px;
+  font-size: 1.25rem;
+  margin-bottom: 20px;
 }
 
 .buttons a {
@@ -63,14 +69,16 @@ body {
   background: #334155;
 }
 
+/* GENERAL SECTIONS */
+
 section {
-  padding: 60px 10%;
+  padding: 70px 10%;
 }
 
 h2 {
   border-left: 4px solid #38bdf8;
-  padding-left: 10px;
-  margin-bottom: 25px;
+  padding-left: 12px;
+  margin-bottom: 30px;
 }
 
 .grid {
@@ -81,15 +89,32 @@ h2 {
 
 .project {
   background: #1e293b;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 25px;
+  margin-bottom: 25px;
   border-radius: 8px;
   border: 1px solid #334155;
 }
 
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   background: #111827;
   border-top: 1px solid #1f2937;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 230px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
 }
